@@ -1,0 +1,352 @@
+/*
+===================================================
+                Page
+===================================================
+*/
+header {
+    height: 200vh;
+}
+
+h2 {
+    margin-top: 2%;
+}
+
+#presentation {
+    margin-top: 10%;
+}
+
+#commander {
+    margin-top: 10%;
+}
+
+.container {
+    clip: rect(0, auto, auto, 0);
+    overflow: hidden;
+    position: absolute;
+    height: 100vh;
+    left: 0;
+    width: 100%;
+}
+
+.container_solid {
+    background: #f7f7f7f7;
+    top: 0;
+}
+
+.title_wrapper {
+    position: fixed;
+    display: block;
+    margin: auto;
+    width: 100%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.title_wrapper h1 {
+    text-align: center;
+    font-size: 64px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Tahoma, serif;
+    font-weight: 900;
+}
+
+.container_solid .title_wrapper h1 {
+    background: url(https://static.vecteezy.com/ti/vecteur-libre/p3/2752778-fond-de-papier-gris-de-luxe-moderne-noir-avec-triangle-texture-ligne-3d-couches-pour-site-web-design-carte-de-visite-vector-illustration-gratuit-vectoriel.jpg);
+    background-size: 100vw auto;
+    background-position: center;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: black;
+}
+
+.container_image {
+    background-image: url(https://static.vecteezy.com/ti/vecteur-libre/p3/2752778-fond-de-papier-gris-de-luxe-moderne-noir-avec-triangle-texture-ligne-3d-couches-pour-site-web-design-carte-de-visite-vector-illustration-gratuit-vectoriel.jpg);
+    background-size: 100vw auto;
+    background-position: center;
+    background-attachment: fixed;
+    top: 100vh;
+}
+
+.container_image .title_wrapper h1 {
+    color: #f7f7f7;
+}
+
+section {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px;
+    margin: auto;
+    max-width: 800px;
+    font-family: 'Tahoma', arial;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.socialMediasBtn {
+    margin-right: 20px;
+    transition: all 0.5s;
+    transform: translateX(0px);
+}
+
+.socialMediasBtn:hover {
+    transform: translateY(30px);
+    filter: brightness(2)
+}
+
+/*
+===================================================
+                scrollEffect
+===================================================
+*/
+.title::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+.title:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.title::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    background: #eec041;
+    z-index: -1;
+    transition: transform .3s ease;
+}
+
+.title {
+    block-size: 100%;
+    inline-size: 100%;
+    position: relative;
+    font-size: 5rem;
+    cursor: default;
+}
+
+/*
+===================================================
+                Footer
+===================================================
+*/
+footer {
+    margin-top: 5%;
+    background-color: rgb(41, 41, 41);
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+}
+
+/*
+===================================================
+                Menu
+===================================================
+*/
+@media (min-width: 1350px) {
+
+    section {
+        display: inline-flex;
+        flex-direction: column;
+        min-height: 100vh;
+        padding: 50px;
+        margin: auto;
+        max-width: 800px;
+        font-family: 'Tahoma', arial;
+    }
+
+    #menuWrap {
+        position: absolute;
+    }
+
+    #droite {
+        width: 100%;
+        margin-left: 30vw;
+    }
+
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+@media (max-width: 1349px) {
+    #menuWrap {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.menu-container {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.menu-container .box {
+    position: relative;
+    width: 400px;
+    height: 100px;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.25);
+    transition-duration: 0.5s;
+}
+
+
+@media only screen and (min-device-width : 480px) {
+    .menu-container .box:hover {
+        transform: translateX(70px);
+        background-color: #e7d193;
+    }
+}
+
+.menu-container .box:hover {
+    background-color: #e7d193;
+}
+
+
+.menu-container .box:hover::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #eec041;
+}
+
+.menu-container .box .content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.menu-container .box .content .icon {
+    position: relative;
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-container .box .content .icon ion-icon {
+    font-size: 2.5em;
+}
+
+/*title
+===================================================
+                upBtn
+===================================================
+*/
+#scrollUp {
+    position: fixed;
+    bottom: 10px;
+    right: -100px;
+    opacity: 0.5;
+}
+
+/*
+===================================================
+                scrollBar
+===================================================
+*/
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#eec041, #e7d193);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    opacity: 1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #eec041;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #eec041;
+}
+
+/*
+===================================================
+                downloadButton
+===================================================
+*/
+.downloadbtn {
+    background-color: #eec041;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.downloadbtn:hover {
+    background-color: #e4ac10;
+}
+
+/*
+===================================================
+                Reseaux
+===================================================
+*/
+
+#reseaux {
+    margin-top: 5%;
+}
+
+iframe {
+    margin-top: 4%;
+}
+
+.reseauxSociaux {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 15mm;
+    margin-top: 2%;
+}
+
+/*
+===================================================
+                Portfolio
+===================================================
+*/
+
+#portfolio {
+    margin-top: 4%;
+}
+
+.imgPortfolio {
+    margin-top: 2%;
+    border: none;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.imgPortfolio:hover {
+    box-shadow: 8px 8px 10px 0 rgba(0, 0, 0, 0.5);
+    transform: scale(1.2);
+}
